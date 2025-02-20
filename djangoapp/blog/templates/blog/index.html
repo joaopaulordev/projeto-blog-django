@@ -1,3 +1,4 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,18 @@
 <body>
 
     <h1>Meu Blog</h1>
+
+    <img src="{% static 'Imagens/lotes-cascavel.jpg' %}" alt="Imagem 1 Desktop"/>
+
+
+    {% for funcionario in funcionarios %}
+          <div>
+            <H3>{{ funcionario.nome }}</H3>
+            <img src="{{ funcionario.foto.url }}" height="200px" width="300px"/>
+          </div>
+    {% endfor %} 
+
+
     
 </body>
 </html>
